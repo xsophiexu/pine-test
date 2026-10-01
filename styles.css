@@ -556,3 +556,11 @@ body:has(dialog[open]) { overflow: hidden; }
 .sd-lead { font-size: 1.08rem; line-height: 1.6; margin: 0 0 22px; color: var(--ink); max-width: 44em; }
 .sd-quote-alt { border-left-color: var(--blue); }
 .sd-quote-alt p { font-size: 1.02rem; }
+
+/* Keep "Ongoing support, not a one-off workshop" on one line on wider screens */
+.section-head-wide { max-width: none; }
+.section-head-wide .section-sub { max-width: 720px; }
+@media (min-width: 860px) { .section-head-wide h2 { white-space: nowrap; } }
+
+/* Right-aligned notes and links */
+.section-more, .gap .source { text-align: right; }
