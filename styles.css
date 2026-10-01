@@ -110,16 +110,17 @@ img { max-width: 100%; }
 
 /* Hero */
 .hero { position: relative; isolation: isolate; padding: 72px 0 64px; background: linear-gradient(180deg, var(--purple-tint) 0%, var(--bg) 100%); overflow: hidden; }
-.hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.hero-copy h1 { text-wrap: balance; }
 .lead { font-size: 1.2rem; color: var(--ink); max-width: 36em; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
 .trust { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; padding: 0; margin: 0; color: var(--muted); font-size: .95rem; }
 .trust strong { color: var(--navy); font-family: var(--font-head); }
 
-.hero-quote { position: relative; margin: 0; background: #fff; border-radius: 20px; padding: 36px 32px 28px; box-shadow: var(--shadow); }
+.hero-quote { position: relative; margin: 0; background: #fff; border-radius: 20px; padding: 28px 26px 22px; box-shadow: var(--shadow); }
 .hero-quote .blob { position: absolute; z-index: -1; inset: -40px -60px auto auto; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #ddd2f1 0 45%, transparent 46%), radial-gradient(circle at 70% 70%, #c3b3e3 0 40%, transparent 41%); opacity: .9; }
 .hero-quote blockquote { margin: 0 0 14px; }
-.hero-quote blockquote p { font-family: var(--font-head); font-size: 1.45rem; line-height: 1.35; color: var(--navy); font-weight: 500; margin: 0; }
+.hero-quote blockquote p { font-family: var(--font-head); font-size: 1.25rem; line-height: 1.35; color: var(--navy); font-weight: 500; margin: 0; }
 .hero-quote blockquote p::before { content: ""; display: block; width: 44px; height: 6px; border-radius: 3px; background: var(--purple); margin-bottom: 18px; }
 .hero-quote figcaption { color: var(--muted); font-size: .9rem; margin-bottom: 14px; }
 .quote-more { font-weight: 700; text-decoration: none; }
@@ -540,3 +541,18 @@ body:has(dialog[open]) { overflow: hidden; }
 /* Impact report */
 .report-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; margin-top: 28px; padding: 24px 26px; background: rgba(255,255,255,.07); border-radius: var(--radius); }
 .report-cta p { margin: 0; color: #c9d0e2; max-width: 44em; }
+
+/* ---------- Homepage: clickable "look inside the courses" cards ---------- */
+.topic-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.topic-card { width: 100%; height: 100%; min-height: 170px; text-align: left; font: inherit; cursor: pointer; border-radius: var(--radius); padding: 22px 20px; display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line); color: var(--ink); transition: transform .15s, box-shadow .15s; }
+.topic-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.topic-card strong { font-family: var(--font-head); font-size: 1.1rem; color: var(--navy); line-height: 1.25; margin-top: 8px; }
+.topic-card > span:not(.tag):not(.topic-more) { color: var(--muted); font-size: .94rem; }
+.topic-card .tag { margin-bottom: 0; }
+.topic-more { margin-top: auto; padding-top: 8px; font-weight: 700; color: var(--purple); font-size: .92rem; }
+.t6 { background: var(--tint); }
+@media (max-width: 900px) { .topic-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .topic-grid { grid-template-columns: 1fr; } }
+.sd-lead { font-size: 1.08rem; line-height: 1.6; margin: 0 0 22px; color: var(--ink); max-width: 44em; }
+.sd-quote-alt { border-left-color: var(--blue); }
+.sd-quote-alt p { font-size: 1.02rem; }

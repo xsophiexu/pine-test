@@ -77,7 +77,7 @@
           <blockquote>
             <p>“I’m almost retired, and this was the best PD I’ve ever been through.”</p>
           </blockquote>
-          <figcaption>Educator in a PINE school, NYU Usability Lab interview</figcaption>
+          <figcaption>Veteran educator at a PINE school</figcaption>
           <a class="quote-more" href="#changed">Why educators say this <span aria-hidden="true">→</span></a>
         </figure>
       </div>
@@ -157,20 +157,94 @@
           </li>
         </ol>
 
-        <!-- Snapshot of learning (report: show titles from the dashboard) -->
+        <!-- A look inside the courses: click a card for more (includes PINE's work with autistic experts) -->
         <div class="topics">
           <div class="topics-head">
             <h3>A look inside the courses</h3>
-            <p>Some of the ideas educators told us stuck with them most:</p>
+            <p>The ideas educators say stuck with them most. Select a card to learn more.</p>
           </div>
-          <ul class="topic-row" aria-label="Example course topics">
-            <li class="topic t1"><span class="tag">Mindset</span><strong>Behavior is communication</strong><span>What a student might be trying to tell you.</span></li>
-            <li class="topic t2"><span class="tag">Classroom tool</span><strong>Visual schedules</strong><span>Predictable structure that helps everyone.</span></li>
-            <li class="topic t3"><span class="tag">Strategy</span><strong>Building on interests</strong><span>Turn a “distraction” into a way in.</span></li>
-            <li class="topic t4"><span class="tag">Teamwork</span><strong>Planning around the whole day</strong><span>Student-centered teams across roles.</span></li>
-            <li class="topic t5"><span class="tag">First-person voices</span><strong>Hearing from autistic adults</strong><span>What school felt like, in their words.</span></li>
+          <ul class="topic-grid">
+            <li><button class="topic-card t1" type="button" data-dialog="topic-behavior" aria-haspopup="dialog">
+              <span class="tag">Mindset</span><strong>Behavior is communication</strong><span>What a student might be trying to tell you.</span><span class="topic-more">Learn more <span aria-hidden="true">→</span></span>
+            </button></li>
+            <li><button class="topic-card t2" type="button" data-dialog="topic-strengths" aria-haspopup="dialog">
+              <span class="tag">Mindset</span><strong>Strengths, not deficits</strong><span>Start from what a student can do.</span><span class="topic-more">Learn more <span aria-hidden="true">→</span></span>
+            </button></li>
+            <li><button class="topic-card t3" type="button" data-dialog="topic-experts" aria-haspopup="dialog">
+              <span class="tag">First-person voices</span><strong>Learning from autistic adults</strong><span>Experts who are themselves autistic and neurodivergent.</span><span class="topic-more">Learn more <span aria-hidden="true">→</span></span>
+            </button></li>
+            <li><button class="topic-card t4" type="button" data-dialog="topic-visual" aria-haspopup="dialog">
+              <span class="tag">Classroom tool</span><strong>Visual schedules</strong><span>Predictable structure that helps everyone.</span><span class="topic-more">Learn more <span aria-hidden="true">→</span></span>
+            </button></li>
+            <li><button class="topic-card t5" type="button" data-dialog="topic-interests" aria-haspopup="dialog">
+              <span class="tag">Strategy</span><strong>Building on interests</strong><span>Turn a “distraction” into a way in.</span><span class="topic-more">Learn more <span aria-hidden="true">→</span></span>
+            </button></li>
+            <li><button class="topic-card t6" type="button" data-dialog="topic-environment" aria-haspopup="dialog">
+              <span class="tag">Environment</span><strong>Changing the space, not the student</strong><span>Adjust the room and routines first.</span><span class="topic-more">Learn more <span aria-hidden="true">→</span></span>
+            </button></li>
           </ul>
         </div>
+
+        <dialog class="story-dialog" id="topic-behavior" aria-labelledby="td-behavior">
+          <div class="sd-inner">
+            <button class="sd-close" type="button" aria-label="Close">×</button>
+            <p class="change-place">Mindset</p>
+            <h3 id="td-behavior">Behavior is communication</h3>
+            <p class="sd-lead">Acting out, shutting down or running from the room is often a student’s way of saying something is wrong, not a sign of disrespect. Educators learn to ask “what is this student trying to tell us?” and to look for triggers like loud noises, busy decor or unclear directions.</p>
+            <blockquote class="sd-quote"><p>“It has shifted my thinking most in the area of behavior as a communication.”</p><footer>PINE course participant, 2026 course survey</footer></blockquote>
+          </div>
+        </dialog>
+
+        <dialog class="story-dialog" id="topic-strengths" aria-labelledby="td-strengths">
+          <div class="sd-inner">
+            <button class="sd-close" type="button" aria-label="Close">×</button>
+            <p class="change-place">Mindset</p>
+            <h3 id="td-strengths">Strengths, not deficits</h3>
+            <p class="sd-lead">Instead of starting from what a student can’t do, educators learn to notice and build on what they do well. In one district, a speech-language pathologist said it changed how she writes goals and designs services.</p>
+            <blockquote class="sd-quote"><p>“I will certainly be more focused on student strengths when program planning for them in the future, instead of what they’re doing ‘wrong’ or what we think their needs are.”</p><footer>PINE course participant, 2026 course survey</footer></blockquote>
+          </div>
+        </dialog>
+
+        <dialog class="story-dialog" id="topic-experts" aria-labelledby="td-experts">
+          <div class="sd-inner">
+            <button class="sd-close" type="button" aria-label="Close">×</button>
+            <p class="change-place">First-person voices</p>
+            <h3 id="td-experts">Learning from autistic adults</h3>
+            <p class="sd-lead">Every PINE course is created with autistic and neurodivergent experts. Educators hear directly from them about what school felt like and what would have helped, something most professional development leaves out.</p>
+            <blockquote class="sd-quote"><p>“I enjoyed hearing from experts in the field who are neurodivergent themselves.”</p><footer>PINE course participant, 2026 course survey</footer></blockquote>
+            <blockquote class="sd-quote sd-quote-alt"><p>“PINE members learn from autistics themselves, as the autistic community is an active partner and guide in creating all of the courses PINE offers.”</p><footer>Becca Lory Hector, IBCCES, CAS, PINE Content Developer</footer></blockquote>
+          </div>
+        </dialog>
+
+        <dialog class="story-dialog" id="topic-visual" aria-labelledby="td-visual">
+          <div class="sd-inner">
+            <button class="sd-close" type="button" aria-label="Close">×</button>
+            <p class="change-place">Classroom tool</p>
+            <h3 id="td-visual">Visual schedules</h3>
+            <p class="sd-lead">A simple picture schedule shows students what’s coming next. It means fewer surprises and smoother transitions, and it helps the whole class, not only neurodivergent students.</p>
+            <blockquote class="sd-quote"><p>“It taught me that even simple schedules and charts could make so much difference in the classroom.”</p><footer>PINE course participant, 2026 course survey</footer></blockquote>
+          </div>
+        </dialog>
+
+        <dialog class="story-dialog" id="topic-interests" aria-labelledby="td-interests">
+          <div class="sd-inner">
+            <button class="sd-close" type="button" aria-label="Close">×</button>
+            <p class="change-place">Strategy</p>
+            <h3 id="td-interests">Building on interests</h3>
+            <p class="sd-lead">A student’s deep interest can be a way into learning instead of something to shut down. At one elementary school, a love of the Titanic became the theme of a student’s math word problems.</p>
+            <blockquote class="sd-quote"><p>“The importance of building relationships and using student interests and strengths.”</p><footer>PINE course participant, 2026 course survey</footer></blockquote>
+          </div>
+        </dialog>
+
+        <dialog class="story-dialog" id="topic-environment" aria-labelledby="td-environment">
+          <div class="sd-inner">
+            <button class="sd-close" type="button" aria-label="Close">×</button>
+            <p class="change-place">Environment</p>
+            <h3 id="td-environment">Changing the space, not the student</h3>
+            <p class="sd-lead">Lighting, noise, seating and routines all shape how a student’s day goes. Educators learn to adjust the room and their practices first, using ideas like Universal Design for Learning.</p>
+            <blockquote class="sd-quote"><p>“I like thinking about how we can change our practices and environment and not put all of the responsibility on the student to adjust.”</p><footer>PINE course participant, 2026 course survey</footer></blockquote>
+          </div>
+        </dialog>
       </div>
     </section>
 
@@ -191,27 +265,27 @@
               <blockquote>
                 <p>“You don’t find that in other professional development programs… They’re going to give you a textbook slideshow. But we have to feel it… and if we can’t walk in somebody’s shoes, the next closest way to do that is by hearing from neurodiverse individuals themselves.”</p>
               </blockquote>
-              <p class="cite">School administrator, NYU Usability Lab interview, 2025</p>
+              <p class="cite">School administrator</p>
             </details>
           </article>
 
           <article class="story">
-            <p class="story-kicker">Building on interests · Elementary school</p>
+            <p class="story-kicker">Building on interests</p>
             <p class="story-quote sm">A student’s love of Simba used to pull him off task.</p>
             <details class="more">
               <summary>What the team tried</summary>
               <p>After a module on interests, his teachers made Simba cards and a Velcro schedule. Simba time became a reward he could see coming, paired with puzzles and other activities.</p>
-              <p class="cite">Paraphrased from an elementary school principal, 2023</p>
+              <p class="cite">Elementary school principal</p>
             </details>
           </article>
 
           <article class="story">
-            <p class="story-kicker">Every role matters · Middle school</p>
+            <p class="story-kicker">Every role matters</p>
             <p class="story-quote sm">A custodian saw a repeated behavior stop.</p>
             <details class="more">
               <summary>What changed</summary>
               <p>One school asked every staff member to take part. A custodian realized the way he spoke to a student was triggering a repeated behavior. When he changed how he spoke, the behavior improved a lot.</p>
-              <p class="cite">Paraphrased from a middle school administrator, 2023</p>
+              <p class="cite">Middle school administrator</p>
             </details>
           </article>
 
@@ -221,7 +295,7 @@
             <details class="more">
               <summary>The rest of the story</summary>
               <p>A student who once needed an aide all day now advocates for himself and reads at almost grade level. Staff said they were sad to see him graduate.</p>
-              <p class="cite">Paraphrased from a school administrator, 2023</p>
+              <p class="cite">School administrator</p>
             </details>
           </article>
         </div>
@@ -357,25 +431,6 @@
       </div>
     </section>
 
-    <!-- EXPERTS -->
-    <section class="section section-tint" aria-labelledby="experts-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Built with neurodivergent experts</p>
-          <h2 id="experts-title">Learn from autistic people themselves</h2>
-        </div>
-        <div class="expert-grid">
-          <figure class="expert">
-            <blockquote><p>“PINE members learn from autistics themselves, as the autistic community is an active partner and guide in creating all of the courses PINE offers.”</p></blockquote>
-            <figcaption><strong>Becca Lory Hector</strong>, IBCCES, CAS, PINE Content Developer</figcaption>
-          </figure>
-          <figure class="expert">
-            <blockquote><p>“What is most amazing is that PINE techniques are exemplars of good teaching practice that will benefit all students.”</p></blockquote>
-            <figcaption><strong>Stephen Shore</strong>, Professor, Adelphi University</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
 
     <!-- SHAREABLE SUMMARY: for advocates who forward PINE to colleagues -->
     <section class="section" aria-labelledby="share-title">
@@ -386,7 +441,7 @@
           <p>Paste this into an email, flyer or board presentation.</p>
         </div>
         <div class="share-box">
-          <p id="share-text">PINE (the Program for Inclusion and Neurodiversity Education) at NYU Steinhardt helps schools understand neurodiversity and build classrooms where every learner belongs. Through leadership training, online courses co-created with autistic people, coaching and ready-to-use tools, PINE has supported more than 7,000 educators in 217 schools. 99% of participants say they learned strategies they could use right away. Learn more at pineprogram.org.</p>
+          <p id="share-text">PINE, the Program for Inclusion and Neurodiversity Education at NYU Steinhardt, helps schools build classrooms where neurodivergent students, and all students, belong. Staff learn through online courses created with autistic and neurodivergent experts, leadership training and live coaching, then put it into practice with ready-to-use tools. More than 7,000 educators in 217 schools and 69 districts have trained with PINE, and 99% say they left with strategies they could use right away. Learn more at pineprogram.org.</p>
           <button class="btn btn-primary" id="copy-btn" type="button">Copy text</button>
           <span class="copy-status" role="status" aria-live="polite"></span>
         </div>
