@@ -32,18 +32,6 @@ if (copyBtn) {
   });
 }
 
-// Scrolling school names: pause / play
-const marquee = document.querySelector('.marquee');
-if (marquee) {
-  const btn = marquee.querySelector('.marquee-toggle');
-  const label = btn.querySelector('.sr-only');
-  btn.addEventListener('click', () => {
-    const paused = marquee.classList.toggle('paused');
-    btn.setAttribute('aria-pressed', String(paused));
-    label.textContent = paused ? 'Play scrolling school names' : 'Pause scrolling school names';
-  });
-}
-
 // Homepage "What changed" story cards open detail dialogs
 document.querySelectorAll('[data-dialog]').forEach(btn => {
   const dlg = document.getElementById(btn.dataset.dialog);

@@ -469,27 +469,10 @@ img { max-width: 100%; }
 .form-status { margin: 14px 0 0; color: var(--ink); }
 
 /* ---------- Homepage: participating schools (type specimens, monochrome) ---------- */
-.schools { padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
-/* One line of names scrolling right-to-left in a seamless loop (track holds two copies) */
-.marquee { position: relative; }
-.marquee-viewport { overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-.marquee-track { display: flex; width: max-content; animation: marquee 55s linear infinite; }
-.marquee:hover .marquee-track, .marquee.paused .marquee-track { animation-play-state: paused; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.school-names { list-style: none; margin: 0; padding: 0 28px 0 0; display: flex; flex-wrap: nowrap; align-items: center; gap: 56px; color: #3b3b40; line-height: 1.15; white-space: nowrap; }
-.marquee-toggle { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: #4a4a50; display: grid; place-items: center; cursor: pointer; opacity: .75; }
-.marquee-toggle:hover, .marquee-toggle:focus-visible { opacity: 1; }
-.marquee-toggle svg { width: 12px; height: 12px; fill: currentColor; }
-.marquee-toggle .i-play, .marquee.paused .marquee-toggle .i-pause { display: none; }
-.marquee.paused .marquee-toggle .i-play { display: block; }
-/* Reduced motion: no animation; names scroll manually instead */
-@media (prefers-reduced-motion: reduce) {
-  .marquee-viewport { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
-  .marquee-track { animation: none; padding: 0 16px; }
-  .marquee-track > .school-names[aria-hidden="true"], .marquee-toggle { display: none; }
-}
+.schools { padding: 36px 0 44px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
+.schools-title { font-family: var(--font-body); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #6b6b73; text-align: center; margin-bottom: 22px; }
+.school-names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 40px; color: #3b3b40; line-height: 1.15; text-align: center; }
+.school-names li { filter: grayscale(1); }
 .sn-1 { font-family: "DM Serif Display", Georgia, serif; font-size: 1.45rem; color: #1f1f23; }
 .sn-2 { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 500; font-size: 1.2rem; letter-spacing: .14em; text-transform: uppercase; color: #4a4a50; }
 .sn-3 { font-family: "Libre Baskerville", Georgia, serif; font-style: italic; font-size: 1.25rem; color: #2d2d31; }
@@ -501,7 +484,7 @@ img { max-width: 100%; }
 .sn-9 { font-family: "Libre Baskerville", Georgia, serif; font-style: italic; font-size: 1.05rem; color: #6a6a70; }
 .sn-10 { font-family: "DM Serif Display", Georgia, serif; font-size: 1.2rem; color: #4a4a50; letter-spacing: .02em; }
 .sn-11 { font-family: "Josefin Sans", sans-serif; font-weight: 600; font-size: 1.2rem; color: #1f1f23; }
-@media (max-width: 600px) { .school-names { gap: 36px; } .marquee-track { animation-duration: 40s; } }
+@media (max-width: 600px) { .school-names { gap: 12px 22px; } .school-names li { font-size: 1rem !important; } }
 
 /* ---------- Homepage: what changed (cards + dialogs) ---------- */
 .change-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
