@@ -32,6 +32,18 @@ if (copyBtn) {
   });
 }
 
+// Homepage "What changed" story cards open detail dialogs
+document.querySelectorAll('[data-dialog]').forEach(btn => {
+  const dlg = document.getElementById(btn.dataset.dialog);
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  // Page scroll is locked in CSS while any dialog is open (body:has(dialog[open]))
+  btn.addEventListener('click', () => dlg.showModal());
+  dlg.querySelector('.sd-close').addEventListener('click', () => dlg.close());
+  // Click on the backdrop (outside the panel) closes
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => btn.focus());
+});
+
 // Contact page: topic buttons preselect "How can we help?"
 const form = document.getElementById('contact-form');
 if (form) {
