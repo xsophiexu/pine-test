@@ -83,22 +83,44 @@
     </section>
 
     <!-- PARTICIPATING SCHOOLS: names set in varied type, monochrome -->
-    <section class="schools" aria-labelledby="schools-title">
-      <div class="wrap">
-        <h2 id="schools-title" class="schools-title">Schools and districts learning with PINE</h2>
-        <ul class="school-names">
-          <li class="sn-1">Elmira City School District</li>
-          <li class="sn-2">Greenwich Public Schools</li>
-          <li class="sn-3">East Syracuse Minoa</li>
-          <li class="sn-4">Ithaca City School District</li>
-          <li class="sn-5">Norwalk Public Schools</li>
-          <li class="sn-6">Corning-Painted Post</li>
-          <li class="sn-7">Madison Metropolitan School District</li>
-          <li class="sn-8">Wayne-Finger Lakes BOCES</li>
-          <li class="sn-9">Dundee Central School District</li>
-          <li class="sn-10">International School of Los Angeles</li>
-          <li class="sn-11">Jasper-Troupsburg</li>
-        </ul>
+    <section class="schools" aria-label="Schools and districts learning with PINE">
+      <div class="marquee">
+        <div class="marquee-viewport">
+        <div class="marquee-track">
+          <ul class="school-names">
+            <li class="sn-1">Elmira City School District</li>
+            <li class="sn-2">Greenwich Public Schools</li>
+            <li class="sn-3">East Syracuse Minoa</li>
+            <li class="sn-4">Ithaca City School District</li>
+            <li class="sn-5">Norwalk Public Schools</li>
+            <li class="sn-6">Corning-Painted Post</li>
+            <li class="sn-7">Madison Metropolitan School District</li>
+            <li class="sn-8">Wayne-Finger Lakes BOCES</li>
+            <li class="sn-9">Dundee Central School District</li>
+            <li class="sn-10">International School of Los Angeles</li>
+            <li class="sn-11">Jasper-Troupsburg</li>
+          </ul>
+          <!-- duplicate for a seamless loop; hidden from screen readers -->
+          <ul class="school-names" aria-hidden="true">
+            <li class="sn-1">Elmira City School District</li>
+            <li class="sn-2">Greenwich Public Schools</li>
+            <li class="sn-3">East Syracuse Minoa</li>
+            <li class="sn-4">Ithaca City School District</li>
+            <li class="sn-5">Norwalk Public Schools</li>
+            <li class="sn-6">Corning-Painted Post</li>
+            <li class="sn-7">Madison Metropolitan School District</li>
+            <li class="sn-8">Wayne-Finger Lakes BOCES</li>
+            <li class="sn-9">Dundee Central School District</li>
+            <li class="sn-10">International School of Los Angeles</li>
+            <li class="sn-11">Jasper-Troupsburg</li>
+          </ul>
+        </div>
+        </div>
+        <button class="marquee-toggle" type="button" aria-pressed="false">
+          <span class="sr-only">Pause scrolling school names</span>
+          <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
+          <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>
+        </button>
       </div>
     </section>
 
