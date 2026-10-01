@@ -56,3 +56,14 @@ if (form) {
       'This concept form doesn’t send messages. Please use the <a href="https://www.pineprogram.org/get-info">official PINE contact form</a>.';
   });
 }
+
+// Impact page: case study cards open detail dialogs
+document.querySelectorAll('[data-dialog]').forEach(btn => {
+  const dlg = document.getElementById(btn.dataset.dialog);
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  btn.addEventListener('click', () => dlg.showModal());
+  dlg.querySelector('.sd-close').addEventListener('click', () => dlg.close());
+  // Clicking the backdrop (outside the panel) closes
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => btn.focus());
+});
